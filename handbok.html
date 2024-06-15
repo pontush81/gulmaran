@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRF Gulmåran</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navigation Bar Styles */
+    nav {
+      background-color: #333;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile Menu */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      color: white;
+      font-size: 1.5em;
+    }
+
+    .navbar ul {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+        text-align: right;
+        padding: 0 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    /* Body and Container Styles */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      margin-bottom: 20px;
+      margin-top: 60px; /* Adjust this value according to the height of your navigation bar */
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px 0;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .container {
+        padding: 40px;
+      }
+
+      h1, h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#aktivitetsrum">Aktivitetsrum</a></li>
+      <li><a href="#elbilsladdning">Elbilsladdning</a></li>
+      <li><a href="#ellagarden">Ellagården</a></li>
+      <li><a href="#foreningsstamma">Föreningsstämma</a></li>
+      <li><a href="#grillregler">Grillregler</a></li>
+      <li><a href="#gastlagenhet">Gästlägenhet</a></li>
+      <li><a href="#fargkod">Färgkod</a></li>
+      <li><a href="#skotselplan">Skötselplan</a></li>
+      <li><a href="#sophantering">Sophantering</a></li>
+      <li><a href="#styrelse">Styrelse</a></li>
+      <li><a href="#styrelsemoten">Styrelsemöten</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2 id="aktivitetsrum">Aktivitetsrum</h2>
+    <p>Ett stort bord med 10 stolar finns att använda med dimbar belysning ovanför.</p>
+    <p>Darttavla med belysning är installerad. För att tända belysningen sker det direkt på armaturen på höger sida.</p>
+    <p>Biljardbord finns att använda.</p>
+    <p>I källaren finns en bluetooth-högtalare som är fri att använda men får inte lämna lokalen.</p>
+    <p>För att slippa städa mer än nödvändigt ber vi er att ställa ytterskor utanför svarta tejpmarkeringen.</p>
+    <p>Lokalen kan bokas genom att fylla i fysisk kalender som ligger på bordet i rummet.</p>
+
+    <h2 id="elbilsladdning">Elbilsladdning</h2>
+    <p>Vi har idag en laddbox. Den hanteras via företaget Voltiva som tillhandahåller en betaltjänst utvecklad för elbilsladdning. Ni behöver en inbjudan från Voltiva för att skapa ett konto. Kontakta Cornel för mer information.</p>
+
+    <h2 id="ellagarden">Ellagården</h2>
+    <p>Möblerna på Ellagården är fria att använda för alla, även för boende i lägenheten i källaren. Dynor ligger i dynboxen och vi önskar att dessa läggs tillbaka varje gång efter användande.</p>
+
+    <h2 id="foreningsstamma">Föreningsstämma</h2>
+    <p>Ordinarie föreningsstämma ska hållas senast före juni månads utgång.</p>
+    <p>Vid föreningsstämma har varje medlem en röst. Om flera medlemmar innehar bostadsrätt gemensamt har de dock tillsammans endast en röst. Medlem som innehar flera lägenheter har också endast en röst.</p>
+    <p>För komplett information se stadgarna i separat dokument.</p>
+
+    <h2 id="grillregler">Grillregler</h2>
+    <p>Lägenheter i markplan med uteplats får använda:</p>
+    <ul>
+      <li>kolgrill (inte under ovanliggande balkong)</li>
+      <li>gasolgrill</li>
+      <li>elgrill</li>
+    </ul>
+    <p>Lägenheter med balkong eller terrass får använda:</p>
+    <ul>
+      <li>gasolgrill</li>
+      <li>elgrill</li>
+    </ul>
+    <p>Se till att gasbehållaren står skyddad och inte utsätts för väder och vind, det kan bli varmt på balkongen. Förvara inte gasolbehållaren under grillen utan vid sidan om p.g.a. värmen från grillen.</p>
+    <p>Engångsgrillar är inte tillåtna.</p>
+
+    <h2>Checklista vid grillning – allmänt</h2>
+    <p>Grillen ska placeras på ett stadigt underlag. Se till att grillen inte står för nära brännbara föremål. Var noga med att regelbundet rengöra grillen från matrester. Det gäller framförallt vid vinterförvaring. Detta även för att inte riskera att vi får problem med ohyra. Gäller både vid förvaring utomhus och inomhus i förråd. Ha alltid tillgång till brandfilt, brandsläckare eller vatten när du ska grilla.</p>
+
+    <h2 id="gastlagenhet">Gästlägenhet</h2>
+    <p>Bokningsförfrågningar skickas till Anders Lindqvist: <a href="mailto:abytorp1969@gmail.com">abytorp1969@gmail.com</a></p>
+    <p>Avgiften för 2023 är beslutad till 400 kr per natt (lågsäsong) förutom högsäsong V24-32 då dygnspriset är 600 kr. Under lågsäsong är det ok att boka strönätter. Under högsäsong är bokningsperiod: Mån-Tors, Tors-Sön, Hel vecka. Alla bekräftade bokningar är bindande för betalning. Om förhinder uppstår kan hyresgästen erbjuda bokning till någon annan att överta.</p>
+    <p>OBS! kalendern nedan är endast i testsyfte för att se om vi kan visa bokade datum... Klicka på länken för att se bokningar: <a href="https://calendar.google.com" target="_blank">calendar.google.com</a></p>
+
+    <h2 id="fargkod">Färgkod markiser och balkongskydd</h2>
+    <p>Färgkod Sandatex 4215/24 för uppsättning av markiser och balkongskydd.</p>
+
+    <h2 id="skotselplan">Skötselplan</h2>
+    <p>(B) = Boende</p>
+    <p>(BRF) = Bostadsrättsförening</p>
+
+    <h3>UTOMHUS</h3>
+    <h4>Ellagården</h4>
+    <p>Sommar</p>
+    <ul>
+      <li>Klippa häcken (B)</li>
+      <li>Rensa stensättning (B)</li>
+      <li>Rensa rabatter (B)</li>
+      <li>Sköta blommor (B)</li>
+    </ul>
+    <p>Vinter</p>
+    <ul>
+      <li>Sopa bort snö (B)</li>
+    </ul>
+
+    <h4>Parkeringsplatser</h4>
+    <ul>
+      <li>Klippa häcken vid parkeringen (B)</li>
+      <li>Rensa ogräs på parkeringsytor och runt häcken (B)</li>
+      <li>Blomlådor (B)</li>
+      <li>Snöskottning (B)</li>
+    </ul>
+
+    <h4>Allmänt</h4>
+    <ul>
+      <li>Byta filter till ventilation (B)</li>
+      <li>Klippa gräs uteplats framsida (B)</li>
+      <li>Klippa gräs uteplats baksida (B)</li>
+    </ul>
+
+    <h4>Korridor Plan 2</h4>
+    <ul>
+      <li>Städa golv (B) (Varje vecka nov - jan. Varannan vecka övrig tid.)</li>
+      <li>Putsa fönster (B)</li>
+      <li>Damma runt fönster, belysning och fönstersmyg (B)</li>
+      <li>Smörja lås ytterdörr (BRF)</li>
+      <li>Kontroll och underhåll dörrstängare (BRF)</li>
+      <li>Byta lampor (BRF)</li>
+      <li>Byta dörrmattor (BRF)</li>
+    </ul>
+
+    <h4>Källare</h4>
+    <ul>
+      <li>Städa korridor, allmänna ytor (B)</li>
+      <li>Städa styrelserum (BRF)</li>
+      <li>Städa pannrum (BRF)</li>
+      <li>Städa gästlägenhet? (BRF)</li>
+      <li>Tömma soptunna (BRF)</li>
+      <li>Smörja lås ytterdörr (BRF)</li>
+      <li>Kontroll och underhåll dörrstängare (BRF)</li>
+      <li>Byta lampor/lysrör (BRF)</li>
+    </ul>
+
+    <h4>Tvättstuga</h4>
+    <ul>
+      <li>Städa golv (B)</li>
+      <li>Städa övriga ytor inkl maskiner (B)</li>
+      <li>Servicekontroll maskiner (BRF)</li>
+      <li>Tömma soptunna (BRF)</li>
+      <li>Byta lampor/lysrör (BRF)</li>
+    </ul>
+
+    <h4>Fasad/tak m.m.</h4>
+    <ul>
+      <li>Kontroll av tak (BRF)</li>
+      <li>Rengöra stuprör (BRF)</li>
+      <li>Kontrollera utvändig brunn till källare (BRF)</li>
+      <li>Kontroll yttre fönster (BRF)</li>
+      <li>Kontroll målning (BRF)</li>
+      <li>Kontroll fasad (BRF)</li>
+      <li>Staket framsida (BRF)</li>
+      <li>Staket mot parkering (BRF)</li>
+    </ul>
+
+    <h4>Övrigt</h4>
+    <ul>
+      <li>Brandskyddsrond (BRF)</li>
+    </ul>
+
+    <h2 id="sophantering">Sophantering och avfall</h2>
+    <h3>Soprummet</h3>
+    <p>Sopkärlet avsett för ”bruna påsar” får EJ innehålla plastpåsar! NSR, sopbolaget, är väldigt stränga, ser de sådana vid kontroll höjs vår avgift.</p>
+
+    <h3>Avfallsanläggningen i Ängelholm</h3>
+    <p>Det krävs att vi identifierar oss med ett kort vid infarten till anläggningen i Ängelholm. Kortet förvaras inlåst och kan lånas av styrelsen. Gäller naturligtvis avfall avsett att lämnas på avfallsanläggningen. Det som får plats i våra kärl eller på återvinningen läggs där.</p>
+
+    <h2 id="styrelse">Styrelse</h2>
+    <p>Ordförande: Anders Lindqvist</p>
+    <p>Ledamot: Ann-Marie Andersson</p>
+    <p>Ledamot: Karin Höjman</p>
+    <p>Ledamot: Pontus Hörberg</p>
+    <p>Ledamot: Cornel Oancea</p>
+    <p>Styrelsen består av minst tre och högst sju ledamöter med högst tre suppleanter.</p>
+    <p>Styrelsen väljs av föreningsstämman. Ledamot och suppleant kan utses för en tid av ett eller två år och kan omväljas.</p>
+    <p>Till ledamot eller suppleant kan förutom medlem även väljas person som tillhör medlemmens familjehushåll och som är bosatt i föreningens hus. Stämma kan dock välja en (1) ledamot som inte uppfyller kraven i föregående mening.</p>
+    <p>För komplett information se stadgarna i separat dokument.</p>
+
+    <h2 id="styrelsemoten">Styrelsemöten - Anteckningar</h2>
+  </div>
+</body>
+</html>

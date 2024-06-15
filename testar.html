@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+        .navbar {
+            background-color: #696a6e; /* Purple color */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .navbar-menu {
+            display: none;
+        }
+        .navbar-toggle {
+            cursor: pointer;
+            display: inline-block;
+            background: none;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+        }
+        .navbar-menu.open {
+            display: block;
+        }
+        .navbar-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar-menu li {
+            padding: 10px 0;
+        }
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .content {
+            padding-top: 60px; /* Space for the navbar */
+            padding-bottom: 20px;
+        }
+        .section {
+            padding: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-brand"></a>
+        <button class="navbar-toggle" onclick="toggleMenu()">☰</button>
+        <div class="navbar-menu" id="navbarMenu">
+            <ul>
+                <li><a href="#aktivitetsrum">Aktivitetsrum</a></li>
+                <li><a href="#elbilsladdning">Elbilsladdning</a></li>
+                <li><a href="#ellagarden">Ellagården</a></li>
+                <li><a href="#foreningsstamma">Föreningsstämma</a></li>
+                <li><a href="#grillregler">Grillregler</a></li>
+                <li><a href="#gastlagenhet">Gästlägenhet</a></li>
+                <li><a href="#fargkoder-markiser">Färgkoder markiser</a></li>
+                <li><a href="#skotselplan">Skötselplan</a></li>
+                <li><a href="#sophantering">Sophantering</a></li>
+                <li><a href="#styrelse">Styrelse</a></li>
+                <li><a href="#styrelsemoten">Styrelsemöten</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="section" id="aktivitetsrum">
+            <h2>Aktivitetsrum</h2>
+            <p>Information about Aktivitetsrum...</p>
+        </div>
+        <div class="section" id="elbilsladdning">
+            <h2>Elbilsladdning</h2>
+            <p>Information about Elbilsladdning...</p>
+        </div>
+        <div class="section" id="ellagarden">
+            <h2>Ellagården</h2>
+            <p>Information about Ellagården...</p>
+        </div>
+        <div class="section" id="foreningsstamma">
+            <h2>Föreningsstämma</h2>
+            <p>Information about Föreningsstämma...</p>
+        </div>
+        <div class="section" id="grillregler">
+            <h2>Grillregler</h2>
+            <p>Information about Grillregler...</p>
+        </div>
+        <div class="section" id="gastlagenhet">
+            <h2>Gästlägenhet</h2>
+            <p>Information about Gästlägenhet...</p>
+        </div>
+        <div class="section" id="fargkoder-markiser">
+            <h2>Färgkoder markiser</h2>
+            <p>Information about Färgkoder markiser...</p>
+        </div>
+        <div class="section" id="skotselplan">
+            <h2>Skötselplan</h2>
+            <p>Information about Skötselplan...</p>
+        </div>
+        <div class="section" id="sophantering">
+            <h2>Sophantering</h2>
+            <p>Information about Sophantering...</p>
+        </div>
+        <div class="section" id="styrelse">
+            <h2>Styrelse</h2>
+            <p>Information about Styrelse...</p>
+        </div>
+        <div class="section" id="styrelsemoten">
+            <h2>Styrelsemöten</h2>
+            <p>Information about Styrelsemöten...</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
