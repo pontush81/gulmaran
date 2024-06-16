@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condo Handbook and Community Site</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        @media (max-width: 767px) {
+            .nav-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Condo Handbook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- Repeat for each section -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">Section 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Section 2</a>
+                </li>
+                <!-- Add more sections as needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <div id="section1" class="section bg-light">
+        <div class="container">
+            <h2>Section 1</h2>
+            <p>Information about section 1.</p>
+        </div>
+    </div>
+    <div id="section2" class="section bg-white">
+        <div class="container">
+            <h2>Section 2</h2>
+            <p>Information about section 2.</p>
+        </div>
+    </div>
+    <!-- Add more sections as needed -->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
