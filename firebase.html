@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Inloggning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Min Hemsida</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Hem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Om</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#login">Logga In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <section id="home">
+            <h2>Hem</h2>
+            <p>Välkommen till min responsiva hemsida!</p>
+        </section>
+        <section id="about">
+            <h2>Om</h2>
+            <p>Information om hemsidan och vad den erbjuder.</p>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Kontaktinformation och formulär.</p>
+        </section>
+        <section id="login" class="form-container">
+            <h2>Logga In</h2>
+            <button id="googleLogin" class="btn btn-danger">Logga in med Google</button>
+            <button id="twitterLogin" class="btn btn-info">Logga in med Twitter</button>
+        </section>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBfjR2t-s5nBMR-F-iEYiSksSM5px-FyTY",
+          authDomain: "gulmaran-d52aa.firebaseapp.com",
+          projectId: "gulmaran-d52aa",
+          storageBucket: "gulmaran-d52aa.appspot.com",
+          messagingSenderId: "610227436335",
+          appId: "1:610227436335:web:2363516809013e4c27bfda",
+          measurementId: "G-3J48EECGDV"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+
+    <script>
+        // Firebase konfiguration
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialisera Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Autentisering med Google
+        document.getElementById('googleLogin').addEventListener('click', function() {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                console.log(result.user);
+            }).catch(function(error) {
+                console.log(error);
+            });
+        });
+
+        // Autentisering med Twitter
+        document.getElementById('twitterLogin').addEventListener('click', function() {
+            var provider = new firebase.auth.TwitterAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+                console.log(result.user);
+            }).catch(function(error) {
+                console.log(error);
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
