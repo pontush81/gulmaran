@@ -31,8 +31,11 @@
       var password = document.getElementById('password').value;
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
+          // Successful login
           var user = userCredential.user;
           document.getElementById('user-details').innerHTML = "Logged in as: " + user.email;
+          // Redirect to gulmaran.html
+          window.location.href = 'gulmaran.html';
         })
         .catch((error) => {
           var errorCode = error.code;

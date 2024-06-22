@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulmaran Page</title>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfjR2t-s5nBMR-F-iEYiSksSM5px-FyTY",
+      authDomain: "gulmaran-d52aa.firebaseapp.com",
+      projectId: "gulmaran-d52aa",
+      storageBucket: "gulmaran-d52aa.appspot.com",
+      messagingSenderId: "610227436335",
+      appId: "1:610227436335:web:2363516809013e4c27bfda",
+      measurementId: "G-3J48EECGDV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Check if user is authenticated
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in
+        document.getElementById('user-info').innerHTML = "Welcome, " + user.email;
+      } else {
+        // No user is signed in, redirect to login page
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Gulmaran Page</h1>
+  <div id="user-info"></div>
+</body>
+</html>
