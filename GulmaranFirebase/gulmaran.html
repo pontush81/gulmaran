@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulmaran Page</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
       body {
@@ -12,7 +11,7 @@
       }
       section {
           margin-top: 20px;
-          padding: 55px 0;
+          padding: 20px 0;
       }
       .calendar-container {
           position: relative;
@@ -40,8 +39,13 @@
       .form-group input {
           flex: 2;
       }
+      .section-offset {
+          position: relative;
+          top: -56px; /* Justera denna höjd baserat på din navigationsmeny */
+          padding-top: 56px; /* Justera denna höjd baserat på din navigationsmeny */
+          margin-bottom: -56px; /* Justera denna höjd baserat på din navigationsmeny */
+      }
   </style>
-  <title>Gulmaran Page</title>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
@@ -56,17 +60,13 @@
       measurementId: "G-3J48EECGDV"
     };
 
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
 
-    // Check if user is authenticated
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in
         document.getElementById('user-info').innerHTML = "Welcome, " + user.email;
       } else {
-        // No user is signed in, redirect to login page
         window.location.href = 'index.html';
       }
     });
@@ -101,29 +101,72 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#section7">Sektion7</a>
                 </li>
-                <!-- Add more sections as needed -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#section8">Sektion8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section9">Sektion9</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section10">Sektion10</a>
+                </li>
             </ul>
         </div>
     </nav>
     <div class="container mt-4">
-        <section id="section1">
+        <section id="section1" class="section-offset">
             <h2>Aktivitetsrum</h2>
-            <p>Information om aktivitetsrummet. Här kan boende boka tid för att använda aktivitetsrummet.</p>
+            <p>Ett stort bord med 10 stolar finns att använda med dimbar belysning ovanför.
+
+                Darttavla med belysning är installerad. För att tända belysningen sker det direkt på
+                armaturen på höger sida.
+                
+                Biljardbord finns att använda.
+                <br>
+                I källaren finns en bluetooth-högtalare som är fri att använda men får inte lämna
+                lokalen.
+                
+                För att slippa städa mer än nödvändigt ber vi er att ställa ytterskor utanför svarta
+                tejpmarkeringen.
+                
+                Lokalen kan bokas genom att fylla i fysisk kalender som ligger på bordet i rummet.</p>
         </section>
-        <section id="section2">
+        <section id="section2" class="section-offset">
             <h2>Elbilsladdning</h2>
-            <p>Information om elbilsladdning. Här kan boende läsa om hur de kan ladda sina elbilar.</p>
+            <p>Vi har idag en laddbox. Den hanteras via företaget Voltiva som tillhandahåller en
+                betaltjänst utvecklad för elbilsladdning. Ni behöver en inbjudan från Voltiva för att
+                skapa ett konto. Kontakta Cornel för mer information.</p>
         </section>
-        <section id="section3">
+        <section id="section3" class="section-offset">
             <h2>Ellagården</h2>
-            <p>Information om Ellagården. Här beskrivs vad Ellagården erbjuder och hur man kan boka den.</p>
+            <p>Möblerna på Ellagården är fria att använda för alla, även för boende i lägenheten i
+                källaren. Dynor ligger i dynboxen och vi önskar att dessa läggs tillbaka varje gång efter
+                användande.</p>
         </section>
-        <section id="section4">
+        <section id="section4" class="section-offset">
             <h2>Föreningsstämma</h2>
-            <p>Information om föreningsstämman. Här finns information om när och var nästa stämma hålls samt hur man kan delta.</p>
+            <p>Ordinarie föreningsstämma ska hållas senast före juni månads utgång.
+
+                Vid föreningsstämma har varje medlem en röst. Om flera medlemmar innehar
+                bostadsrätt gemensamt har de dock tillsammans endast en röst. Medlem som innehar
+                flera lägenheter har också endast en röst.
+                
+                För komplett information se stadgarna i separat dokument.</p>
         </section>
-        <section id="section5">
+
+        <section id="section5" class="section-offset">
             <h3>Bokningsförfrågan gästrum</h3>
+            Bokningsförfrågningar skickas till tinautas@hotmail.com eller jacob@upsec.se
+            Avgiften är beslutad till:
+            lågsäsong 400 kr per natt
+            högsäsong (V24-32) 600 kr per natt
+            Under lågsäsong är det ok att boka strönätter.
+            Under högsäsong är bokningsperiod:
+            Mån-Tors
+            Tors-Sön
+            Hel vecka
+            Alla bekräftade bokningar är bindande för betalning. Om förhinder uppstår kan
+            hyresgästen erbjuda bokning till någon annan att överta.
             <div class="calendar-container">
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FStockholm&bgcolor=%23ffffff&showTitle=0&showTz=0&src=OTE3YzY3YTMxMjViMTBhZWY5YTBmMmQ3ZmVkYjUzYjFiNjg1NGU2YjI5ZWNlODUwMTY0YzMyMjgyMWU5ODUyMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
@@ -150,13 +193,162 @@
                 <input type="submit" value="Skicka">
             </form>        
         </section>
-        <section id="section6">
-            <h2>Sektion 6</h2>
-            <p>Information om sektion 6. Här kan du lägga till ytterligare sektioner och information.</p>
+        <section id="section6" class="section-offset">
+            <h2>Grillregler</h2>
+            <p>Lägenheter i markplan med uteplats får använda:
+
+                kolgrill (inte under ovanliggande balkong)
+                gasolgrill
+                elgrill
+                 
+                
+                Lägenheter med balkong eller terrass får använda:
+                
+                gasolgrill
+                elgrill. Se till att gasbehållaren står skyddad och inte utsätts för väder och vind, det
+                kan bli varmt på balkongen. Förvara inte gasolbehållaren under grillen utan vid sidan
+                om p.g.a. värmen från grillen.
+                Engångsgrillar är inte tillåtna
+                Checklista vid grillning – allmänt
+
+                Grillen ska placeras på ett stadigt underlag.
+                Se till att grillen inte står för nära brännbara föremål.
+                Var noga med att regelbundet rengöra grillen från matrester. Det gäller framförallt
+                vid vinterförvaring. Detta även för att inte riskera att vi får problem med ohyra.
+                Gäller både vid förvaring utomhus och inomhus i förråd.
+                Ha alltid tillgång till brandfilt, brandsläckare eller vatten när du ska grilla.
+            </p>
         </section>
-        <section id="section7">
-            <h2>Sektion 7</h2>
-            <p>Information om sektion 7. Här kan du lägga till ytterligare sektioner och information.</p>
+        <section id="section7" class="section-offset">
+            <h2>Färgkod markiser och balkongskydd</h2>
+            <p>Färgkod Sandatex 4215/24 för uppsättning av markiser och balkongskydd.</p>
+        </section>
+        <section id="section8" class="section-offset">
+            <h2>Skötselplan</h2>
+            <p>B) = Boende
+
+                (BRF) = Bostadsrättsförening
+                
+                UTOMHUS
+                
+                Ellagården
+                
+                Sommar
+                Klippa häcken (B)
+                Rensa stensättning (B)
+                Rensa rabatter (B)
+                Sköta blommor (B)
+                Vinter
+                Sandning (B)
+                Snöröjning (B)
+                Året om
+                Sopning (B)
+                Kratta löv (B) (Lövsug/blås inköpt. Förvaring i källare.)
+                Byta lampor till fasadbelysning (B)
+                Städa trapporna (B)
+                Bilparkering + Bilväg Ica
+
+                Sommar
+                Klippa häcken (Kommunen)
+                Vinter
+                Sandning (B)
+                Snöröjning  (B) + Inhyrd snöröjning
+                Året runt
+                Sopning (B)
+                Rensa rabatter  (B)
+                INOMHUS
+                
+                Soprum
+                
+                Städning golv (BRF)
+                Städning sopkärl (BRF)
+                Smörja lås (BRF)
+                Underhålla verktyg (BRF)
+                Lägenheter
+
+                Köpa filter ventilation (BRF)
+                Byta filter till ventilation (B)
+                Klippa gräs uteplats framsida (B)
+                Klippa gräs uteplats baksida (B)
+                Korridor Plan 2
+                
+                Städa golv (B) (Varje vecka nov - jan. Varannan vecka övrig tid.)
+                Putsa fönster (B)
+                Damma runt fönster, belysning och fönstersmyg (B)
+                Smörja lås ytterdörr (BRF)
+                Kontroll och underhåll dörrstängare (BRF)
+                Byta lampor (BRF)
+                Byta dörrmattor (BRF)
+                Källare
+
+                Städa korridor, allmänna ytor (B)
+                Städa styrelserum (BRF)
+                Städa pannrum (BRF)
+                Städa gästlägenhet? (BRF)
+                Tömma soptunna (BRF)
+                Smörja lås ytterdörr (BRF)
+                Kontroll och underhåll dörrstängare (BRF)
+                Byta lampor/lysrör (BRF)
+                Tvättstuga
+                Städa golv (B)
+                Städa övriga ytor inkl maskiner (B)
+                Servicekontroll maskiner (BRF)
+                Tömma soptunna (BRF)
+                Byta lampor/lysrör (BRF)
+                Fasad/tak m.m.
+
+                Kontroll av tak (BRF)
+                Rengöra stuprör (BRF)
+                Kontrollera utvändig brunn till källare (BRF)
+                Kontroll yttre fönster (BRF)
+                Kontroll målning (BRF)
+                Kontroll fasad (BRF)
+                Staket framsida (BRF)
+                Staket mot parkering (BRF)
+                Övrigt
+
+                Brandskyddsrond (BRF)
+            </p>
+        </section>
+        <section id="section8" class="section-offset">
+            <h2>Sophantering och avfall</h2>
+            <p>Soprummet
+
+                Sopkärlet avsett för ”bruna påsar” får EJ innehålla plastpåsar! NSR, sopbolaget, är
+                väldigt stränga, ser de sådana vid kontroll höjs vår avgift.
+                
+                Avfallsanläggningen i Ängelholm
+                
+                Det krävs att vi identifierar oss med ett kort vid infarten till anläggningen i Ängelholm.
+                Kortet förvaras inlåst och kan lånas av styrelsen. Gäller naturligtvis avfall avsett att
+                lämnas på avfallsanläggningen. Det som får plats i våra kärl eller på återvinningen
+                läggs där.
+            </p>
+        </section>
+        <section id="section9" class="section-offset">
+            <h2>Styrelse</h2>
+            <p>
+                Ordförande: Anders Lindqvist
+                Ledamot: Jacob Adaktusson
+                Ledamot: Kristina Utas
+                Ledamot: Karin Höjman
+                Ledamot: Pontus Hörberg
+                Ledamot: Cornel Oancea
+                Styrelsen består av minst tre och högst sju ledamöter med högst tre suppleanter.
+                
+                Styrelsen väljs av föreningsstämman. Ledamot och suppleant kan utses för en tid av
+                ett eller två år och kan omväljas.
+                
+                Till ledamot eller suppleant kan förutom medlem även väljas person som tillhör
+                medlemmens familjehushåll och som är bosatt i föreningens hus. Stämma kan dock
+                välja en (1) ledamot som inte uppfyller kraven i föregående mening.
+                
+                För komplett information se stadgarna i separat dokument.
+            </p>
+        </section>
+        <section id="section10" class="section-offset">
+            <h2>Styrelsemöten  - Anteckningar</h2>
+            <p>Information om sektion 10. Här kan du lägga till ytterligare sektioner och information.</p>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -164,7 +356,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function() {
-        // När användaren klickar på dokumentet
         $(document).click(function(event) {
             var clickover = $(event.target);
             var _opened = $(".navbar-collapse").hasClass("show");
