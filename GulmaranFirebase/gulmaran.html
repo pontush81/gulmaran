@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
   <title>Gulmaran Page</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
       body {
           padding-top: 56px; /* Justera denna höjd baserat på din navigationsmeny */
       }
+      html {
+          height: 100%;
+      }
       section {
           margin-top: 20px;
           padding: 20px 0;
+          
       }
       .calendar-container {
           position: relative;
@@ -45,6 +54,9 @@
           padding-top: 56px; /* Justera denna höjd baserat på din navigationsmeny */
           margin-bottom: -56px; /* Justera denna höjd baserat på din navigationsmeny */
       }
+      .custom-table thead th {
+      border-bottom: 2px solid #dee2e6;
+    }
   </style>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
@@ -160,22 +172,25 @@
 
         <section id="section5" class="section-offset">
             <h3>Bokningsförfrågan gästrum</h3>
-            Bokningsförfrågningar skickas till tinautas@hotmail.com eller jacob@upsec.se
+            Bokningsförfrågningar skickas till <br>
+            <li>tinautas@hotmail.com eller jacob@upsec.se</li>
             Avgiften är beslutad till:
-            lågsäsong 400 kr per natt
-            högsäsong (V24-32) 600 kr per natt
-            Under lågsäsong är det ok att boka strönätter.
-            Under högsäsong är bokningsperiod:
-            Mån-Tors
-            Tors-Sön
-            Hel vecka
+            <li>lågsäsong 400 kr per natt</li>
+            <li>högsäsong (V24-32) 600 kr per natt</li>
+            <br>
+            Under lågsäsong är det ok att boka strönätter.<br>
+            Under högsäsong är bokningsperiod:<br>
+            Mån-Tors<br>
+            Tors-Sön<br>
+            Hel vecka<br>
+            <br>
             Alla bekräftade bokningar är bindande för betalning. Om förhinder uppstår kan
             hyresgästen erbjuda bokning till någon annan att överta.
             <div class="calendar-container">
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FStockholm&bgcolor=%23ffffff&showTitle=0&showTz=0&src=OTE3YzY3YTMxMjViMTBhZWY5YTBmMmQ3ZmVkYjUzYjFiNjg1NGU2YjI5ZWNlODUwMTY0YzMyMjgyMWU5ODUyMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
             <br>
-            Nedan kan du skicka in bokningförfrågan
+           <!-- Nedan kan du skicka in bokningförfrågan
             <br><br>
             <form action="https://formspree.io/f/xeqyydrq" method="post">
                 <div class="form-group">
@@ -195,32 +210,33 @@
                 <br><br>
                 <input type="hidden" name="_cc" value="annie_malmgren@hotmail.com,pontus.hberg@gmail.com">
                 <input type="submit" value="Skicka">
-            </form>        
+            </form>        -->
         </section>
         <section id="section6" class="section-offset">
             <h2>Grillregler</h2>
-            <p>Lägenheter i markplan med uteplats får använda:
-
-                kolgrill (inte under ovanliggande balkong)
-                gasolgrill
-                elgrill
-                 
+            <p><b>Lägenheter i markplan med uteplats får använda:</b>
+                <br>
+                <li> Kolgrill (inte under ovanliggande balkong)</li>
+                <li> gasolgrill</li>
+                <li> elgrill</li>
+                <br> 
                 
-                Lägenheter med balkong eller terrass får använda:
+                <b>Lägenheter med balkong eller terrass får använda:</b>
                 
-                gasolgrill
-                elgrill. Se till att gasbehållaren står skyddad och inte utsätts för väder och vind, det
+                <li>gasolgrill</li>
+               <li>elgrill. Se till att gasbehållaren står skyddad och inte utsätts för väder och vind, det
                 kan bli varmt på balkongen. Förvara inte gasolbehållaren under grillen utan vid sidan
-                om p.g.a. värmen från grillen.
-                Engångsgrillar är inte tillåtna
-                Checklista vid grillning – allmänt
-
-                Grillen ska placeras på ett stadigt underlag.
-                Se till att grillen inte står för nära brännbara föremål.
-                Var noga med att regelbundet rengöra grillen från matrester. Det gäller framförallt
+                om p.g.a. värmen från grillen.</li>
+                <li>Engångsgrillar är inte tillåtna</li>
+                <br><br>
+                <b>Checklista vid grillning – allmänt</b>
+                
+                <li> ska placeras på ett stadigt underlag.</li>
+                <li>  Se till att grillen inte står för nära brännbara föremål.</li>
+                <li> Var noga med att regelbundet rengöra grillen från matrester. Det gäller framförallt
                 vid vinterförvaring. Detta även för att inte riskera att vi får problem med ohyra.
-                Gäller både vid förvaring utomhus och inomhus i förråd.
-                Ha alltid tillgång till brandfilt, brandsläckare eller vatten när du ska grilla.
+                Gäller både vid förvaring utomhus och inomhus i förråd.</li>
+                <li>Ha alltid tillgång till brandfilt, brandsläckare eller vatten när du ska grilla.</li>
             </p>
         </section>
         <section id="section7" class="section-offset">
@@ -228,7 +244,61 @@
             <p>Färgkod Sandatex 4215/24 för uppsättning av markiser och balkongskydd.</p>
         </section>
         <section id="section8" class="section-offset">
-            <h2>Skötselplan</h2>
+             <div class="container">
+                <div class="container">
+                    <h1 class="my-4">Skötselplan</h1>
+                    <table class="table custom-table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>Uppgift</th>
+                          <th>Ansvarig</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Ekonomi & bank</td>
+                          <td>Anders, Cornel</td>
+                        </tr>
+                        <tr>
+                          <td>HSB</td>
+                          <td>Anders</td>
+                        </tr>
+                        <tr>
+                          <td>Gästlägenhet</td>
+                          <td>Tina, Jacob</td>
+                        </tr>
+                        <tr>
+                          <td>Tvättstuga</td>
+                          <td>Anette, Leif</td>
+                        </tr>
+                        <tr>
+                          <td>Trädgård</td>
+                          <td>Anna-Lena, Leif, Anette</td>
+                        </tr>
+                        <tr>
+                          <td>Fastighet</td>
+                          <td>Cornel, Leif, Jonas</td>
+                        </tr>
+                        <tr>
+                            <td>Korridor, fönster plan 2</td>
+                            <td>Karin, Annie</td>
+                          </tr>
+                          <tr>
+                            <td>Parkering</td>
+                            <td>Cornel</td>
+                          </tr>
+                          <tr>
+                            <td>IT, gemensam mail, etc</td>
+                            <td>Pontus</td>
+                          </tr>
+                          <tr>
+                            <td>Båstad Kommun</td>
+                            <td>Cornel</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>         
+            <!-- <h2>Skötselplan</h2>
             <p>B) = Boende
 
                 (BRF) = Bostadsrättsförening
@@ -312,16 +382,15 @@
                 Övrigt
 
                 Brandskyddsrond (BRF)
-            </p>
+            </p>-->
         </section>
         <section id="section9" class="section-offset">
             <h2>Sophantering och avfall</h2>
-            <p>Soprummet
-
-                Sopkärlet avsett för ”bruna påsar” får EJ innehålla plastpåsar! NSR, sopbolaget, är
+            <p>
+                Sopkärlet avsett för ”bruna påsar” får <b>EJ innehålla plastpåsar!</b> NSR, sopbolaget, är
                 väldigt stränga, ser de sådana vid kontroll höjs vår avgift.
-                
-                Avfallsanläggningen i Ängelholm
+                <br><br>
+                <b>Avfallsanläggningen i Ängelholm</b>
                 
                 Det krävs att vi identifierar oss med ett kort vid infarten till anläggningen i Ängelholm.
                 Kortet förvaras inlåst och kan lånas av styrelsen. Gäller naturligtvis avfall avsett att
@@ -332,17 +401,18 @@
         <section id="section10" class="section-offset">
             <h2>Styrelse</h2>
             <p>
-                Ordförande: Anders Lindqvist
-                Ledamot: Jacob Adaktusson
-                Ledamot: Kristina Utas
-                Ledamot: Karin Höjman
-                Ledamot: Pontus Hörberg
-                Ledamot: Cornel Oancea
+                <li>Ordförande: Anders Lindqvist</li>
+                <li>Ledamot: Jacob Adaktusson</li>
+                <li>Ledamot: Kristina Utas</li>
+                <li>Ledamot: Karin Höjman</li>
+                <li>Ledamot: Pontus Hörberg</li>
+                <li>Ledamot: Cornel Oancea</li>
+                <br><br>
                 Styrelsen består av minst tre och högst sju ledamöter med högst tre suppleanter.
-                
+                <br><br>
                 Styrelsen väljs av föreningsstämman. Ledamot och suppleant kan utses för en tid av
                 ett eller två år och kan omväljas.
-                
+                <br><br>
                 Till ledamot eller suppleant kan förutom medlem även väljas person som tillhör
                 medlemmens familjehushåll och som är bosatt i föreningens hus. Stämma kan dock
                 välja en (1) ledamot som inte uppfyller kraven i föregående mening.
@@ -352,7 +422,13 @@
         </section>
         <section id="section11" class="section-offset">
             <h2>Styrelsemöten  - Anteckningar</h2>
-            <p>Information om sektion 10. Här kan du lägga till ytterligare sektioner och information.</p>
+            <p>Information om sektion 10. Här kan du lägga till ytterligare sektioner och information.informationinformationinformation
+                information
+                information
+                information
+                information
+                v
+            </p>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
