@@ -44,14 +44,41 @@
         });
     };
   </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+    #login-form {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #login-form input {
+      margin-bottom: 10px;
+    }
+    #user-details {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Välkommen till Gulmåran</h1>
-  <div id="login-form">
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
+  <div id="login-form" class="text-center">
+    <h1 class="mb-4">Välkommen till Gulmåran</h1>
+    <input type="email" id="email" class="form-control" placeholder="Email" required>
+    <input type="password" id="password" class="form-control" placeholder="Password" required>
+    <button class="btn btn-primary btn-block" onclick="login()">Login</button>
+    <div id="user-details"></div>
   </div>
-  <div id="user-details"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
