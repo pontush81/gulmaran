@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Gulmaran Page</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding-top: 56px; /* Adjust this height based on your navigation menu */
+    }
+    section {
+      margin-top: 20px;
+      padding: 20px 0;
+    }
+    .calendar-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 75%; /* Adjust ratio as needed */
+    }
+    .calendar-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .section-offset {
+      position: relative;
+      top: -56px; /* Adjust this height based on your navigation menu */
+      padding-top: 56px; /* Adjust this height based on your navigation menu */
+      margin-bottom: -56px; /* Adjust this height based on your navigation menu */
+    }
+    .custom-table thead th {
+      border-bottom: 2px solid #dee2e6;
+    }
+  </style>
+
+  <!-- Firebase Configuration -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfjR2t-s5nBMR-F-iEYiSksSM5px-FyTY",
+      authDomain: "gulmaran-d52aa.firebaseapp.com",
+      projectId: "gulmaran-d52aa",
+      storageBucket: "gulmaran-d52aa.appspot.com",
+      messagingSenderId: "610227436335",
+      appId: "1:610227436335:web:2363516809013e4c27bfda",
+      measurementId: "G-3J48EECGDV"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        document.getElementById('user-info').innerHTML = "Welcome, " + user.email;
+      } else {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gulmåran</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#section1">Aktivitetsrum</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section2">Elbilsladdning</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section3">Ellagården</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section4">Föreningsstämma</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section5">Gästrum</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section6">Grillregler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section7">Färgkod markis och balkongskydd</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section8">Skötselplan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section9">Sophantering</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section10">Styrelse</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section11">Styrelsemöten - Anteckningar</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <!-- Sections -->
+    <section id="section1" class="section-offset">
+      <h2>Aktivitetsrum</h2>
+      <p>Ett stort bord med 10 stolar finns att använda med dimbar belysning ovanför. Darttavla med belysning är installerad...</p>
+    </section>
+    <section id="section2" class="section-offset">
+      <h2>Elbilsladdning</h2>
+      <p>Vi har idag en laddbox. Den hanteras via företaget Voltiva som tillhandahåller en betaltjänst utvecklad för elbilsladdning...</p>
+    </section>
+    <section id="section3" class="section-offset">
+      <h2>Ellagården</h2>
+      <p>Möblerna på Ellagården är fria att använda för alla, även för boende i lägenheten i källaren...</p>
+    </section>
+    <section id="section4" class="section-offset">
+      <h2>Föreningsstämma</h2>
+      <p>Ordinarie föreningsstämma ska hållas senast före juni månads utgång...</p>
+    </section>
+    <section id="section5" class="section-offset">
+      <h3>Bokningsförfrågan gästrum</h3>
+      <p>Bokningsförfrågningar skickas till tinautas@hotmail.com eller jacob@upsec.se...</p>
+      <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FStockholm&bgcolor=%23ffffff&showTitle=0&showTz=0&src=OTE3YzY3YTMxMjViMTBhZWY5YTBmMmQ3ZmVkYjUzYjFiNjg1NGU2YjI5ZWNlODUwMTY0YzMyMjgyMWU5ODUyMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237CB342" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </section>
+    <section id="section6" class="section-offset">
+      <h2>Grillregler</h2>
+      <p><b>Lägenheter i markplan med uteplats får använda:</b> Kolgrill (inte under ovanliggande balkong)...</p>
+    </section>
+    <section id="section7" class="section-offset">
+      <h2>Färgkod markiser och balkongskydd</h2>
+      <p>Färgkod Sandatex 4215/24 för uppsättning av markiser och balkongskydd.</p>
+    </section>
+    <section id="section8" class="section-offset">
+      <h1 class="my-4">Skötselplan</h1>
+      <table class="table custom-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Uppgift</th>
+            <th>Ansvarig</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ekonomi & bank</td><td>Anders, Cornel</td></tr>
+          <tr><td>HSB</td><td>Anders</td></tr>
+          <tr><td>Gästlägenhet</td><td>Tina, Jacob</td></tr>
+          <tr><td>Tvättstuga</td><td>Anette, Leif</td></tr>
+          <tr><td>Trädgård</td><td>Anna-Lena, Leif, Anette</td></tr>
+          <tr><td>Fastighet</td><td>Cornel, Leif, Jonas</td></tr>
+          <tr><td>Korridor, fönster, lysrör, etc.</td><td>Samtliga boende</td></tr>
+          <tr><td>Fönsterputsning</td><td>Anna-Lena</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="section9" class="section-offset">
+      <h2>Sophantering</h2>
+      <p>Sophantering sker via två behållare i våra två soprum...</p>
+    </section>
+    <section id="section10" class="section-offset">
+      <h2>Styrelse</h2>
+      <ul>
+        <li>Anders Plambeck, Ordförande</li>
+        <li>Leif Norberg, Vice ordförande</li>
+        <li>Anette Höhncke, Sekreterare</li>
+        <li>Jonas Mårtensson, Ledamot</li>
+        <li>Cornel Calinescu, Ledamot</li>
+        <li>Tina Utas, Ledamot</li>
+        <li>Jacob Nielsen, Ledamot</li>
+      </ul>
+    </section>
+    <section id="section11" class="section-offset">
+      <h2>Styrelsemöten - Anteckningar</h2>
+      <p>Anteckningar från styrelsemöten publiceras här...</p>
+    </section>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS to handle navbar collapse on link click -->
+  <script>
+    document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 992) {
+          document.querySelector('.navbar-toggler').click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
