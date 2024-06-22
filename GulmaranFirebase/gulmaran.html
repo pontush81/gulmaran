@@ -431,19 +431,33 @@
             </p>
         </section>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    -->
     <script>
-    $(document).ready(function() {
-        $(document).click(function(event) {
-            var clickover = $(event.target);
-            var _opened = $(".navbar-collapse").hasClass("show");
-            if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-                $(".navbar-toggler").click();
-            }
+        $(document).ready(function() {
+            // Stäng menyn när man klickar på en länk inom menyn
+            $(".nav-link").on('click', function() {
+                // Kontrollera om den responsiva menyn är öppen
+                var _opened = $(".navbar-collapse").hasClass("show");
+                // Om menyn är öppen, stäng den
+                if (_opened === true) {
+                    $(".navbar-toggler").click(); // Klicka på toggler-knappen för att stänga menyn
+                }
+            });
+        
+            // Stäng menyn när man klickar utanför menyn
+            $(document).click(function(event) {
+                var clickover = $(event.target);
+                var _opened = $(".navbar-collapse").hasClass("show");
+                if (_opened === true && !clickover.hasClass("navbar-toggler") && clickover.closest('.navbar-collapse').length === 0) {
+                    $(".navbar-toggler").click();
+                }
+            });
         });
-    });
-    </script>
+        </script>
+        
+        
 </body>
 </html>
